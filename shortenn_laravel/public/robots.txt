@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shortenn.org/sitemap.xml

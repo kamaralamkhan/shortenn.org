@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+
+# Disallow internal application paths to save crawl budget
+Disallow: /dashboard
+Disallow: /export
+Disallow: /login
+Disallow: /register
+Disallow: /logout
+
+# Ensure Google AdSense can always crawl the site for ad relevance
+User-agent: Mediapartners-Google
+Allow: /
+
+# Explicitly allow AI crawlers to read FAQ and Features to recommend the site
+User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://shortenn.org/sitemap.xml

@@ -1,0 +1,54 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I shorten a URL?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Simply paste your long URL in the input box on the homepage and click 'Shorten'. You can also shorten multiple URLs at once by entering them line by line."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to create an account?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No! You can use Shortenn without registration. However, creating an account allows you to manage your links, view analytics, and access advanced features."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I customize my short URL?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! When shortening URLs, use the format: URL | custom-alias. Custom aliases must be 3-30 characters and can contain letters, numbers, dashes, and underscores."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I set an expiry date?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the format: URL | alias | YYYY-MM-DD. Example: https://example.com | summer | 2025-12-31"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I limit the number of clicks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! Use the format: URL | alias | expiry | max_clicks. Example: https://example.com | promo | 2025-12-31 | 1000"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Shortenn really free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! Shortenn is completely free with no hidden fees or premium plans. All features are available to everyone."
+      }
+    }
+  ]
+}

@@ -1,0 +1,219 @@
+========================================
+FAQ WHITE PAGE - DEBUGGING STEPS
+========================================
+
+You've uploaded:
+✅ app.blade.php (layout)
+✅ faq.blade.php (content)
+
+But still seeing white page.
+
+========================================
+STEP 1: CHECK LARAVEL LOGS
+========================================
+
+Via SSH or File Manager, check:
+/public_html/shortenn_laravel/storage/logs/laravel.log
+
+Look at the LAST 50 lines for errors.
+
+Via SSH:
+tail -n 50 /home/u824503943/domains/shortenn.org/public_html/shortenn_laravel/storage/logs/laravel.log
+
+Look for:
+- Syntax errors
+- View not found
+- Blade compilation errors
+- Any PHP errors
+
+========================================
+STEP 2: CLEAR ALL CACHES (AGAIN)
+========================================
+
+Via SSH, run THESE EXACT COMMANDS:
+
+cd /home/u824503943/domains/shortenn.org/public_html/shortenn_laravel
+
+# Delete compiled views
+rm -rf storage/framework/views/*
+
+# Delete bootstrap cache
+rm -f bootstrap/cache/config.php
+rm -f bootstrap/cache/routes-v7.php
+rm -f bootstrap/cache/services.php
+rm -f bootstrap/cache/packages.php
+
+# Clear Laravel caches
+php artisan cache:clear
+php artisan view:clear
+php artisan config:clear
+php artisan route:clear
+
+========================================
+STEP 3: CHECK FILE EXISTS ON SERVER
+========================================
+
+Via SSH or File Manager, verify:
+
+ls -lh /home/u824503943/domains/shortenn.org/public_html/shortenn_laravel/resources/views/pages/faq.blade.php
+
+Should show:
+- File exists
+- Size is around 5,000 bytes (NOT 0 bytes!)
+
+If 0 bytes or missing, upload again!
+
+========================================
+STEP 4: CHECK FILE PERMISSIONS
+========================================
+
+Via SSH:
+
+chmod 644 /home/u824503943/domains/shortenn.org/public_html/shortenn_laravel/resources/views/pages/faq.blade.php
+
+chmod 755 /home/u824503943/domains/shortenn.org/public_html/shortenn_laravel/storage/framework/views/
+
+========================================
+STEP 5: TEST WITH ERROR DISPLAY
+========================================
+
+Temporarily enable error display.
+
+Edit: /public_html/shortenn_laravel/.env
+
+Change:
+APP_DEBUG=false
+
+To:
+APP_DEBUG=true
+
+Then visit: https://shortenn.org/faq
+
+You'll see the ACTUAL error message!
+
+IMPORTANT: Change back to false after debugging!
+
+========================================
+STEP 6: CHECK IF ROUTE WORKS
+========================================
+
+Via SSH, test the route:
+
+cd /home/u824503943/domains/shortenn.org/public_html/shortenn_laravel
+
+php artisan route:list | grep faq
+
+Should show:
+GET|HEAD  faq ................ faq › HomeController@faq
+
+If not shown, routes are not updated!
+
+========================================
+STEP 7: VERIFY LAYOUT FILE
+========================================
+
+Check if app.blade.php has @stack('scripts') before </body>
+
+Location: resources/views/layouts/app.blade.php
+
+Should have near end:
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+@stack("scripts")
+</body>
+</html>
+
+========================================
+STEP 8: ALTERNATIVE - CHECK DIRECTLY
+========================================
+
+Create a simple test file to see if Blade works:
+
+Create: resources/views/pages/test.blade.php
+
+Content:
+@extends('layouts.app')
+@section('content')
+<h1>TEST PAGE WORKS</h1>
+@endsection
+
+Add route in web.php:
+Route::get('/test', function() { return view('pages.test'); });
+
+Clear cache and visit: https://shortenn.org/test
+
+If test works but FAQ doesn't, FAQ file has syntax error!
+
+========================================
+MOST LIKELY CAUSES:
+========================================
+
+1. ❌ Compiled view cache not cleared
+   → Delete storage/framework/views/*
+
+2. ❌ File uploaded to wrong location
+   → Verify exact path on server
+
+3. ❌ File is still 0 bytes on server
+   → Re-upload the file
+
+4. ❌ PHP syntax error in faq.blade.php
+   → Check laravel.log for error
+
+5. ❌ Layout (app.blade.php) has syntax error
+   → Check laravel.log for error
+
+========================================
+QUICKEST FIX:
+========================================
+
+1. Enable debug in .env:
+   APP_DEBUG=true
+
+2. Visit FAQ page
+
+3. Read the error message
+
+4. Fix based on error
+
+5. Disable debug:
+   APP_DEBUG=false
+
+========================================
+IF STILL WHITE PAGE WITH DEBUG=TRUE:
+========================================
+
+This means PHP is crashing hard (fatal error).
+
+Check PHP error log:
+/home/u824503943/domains/shortenn.org/public_html/error_log
+
+Or ask Hostinger support to check PHP error log.
+
+========================================
+UPLOAD CHECKLIST:
+========================================
+
+Make sure these files are uploaded:
+
+✅ /public_html/shortenn_laravel/resources/views/layouts/app.blade.php
+✅ /public_html/shortenn_laravel/resources/views/pages/faq.blade.php
+✅ /public_html/shortenn_laravel/routes/web.php
+✅ /public_html/shortenn_laravel/app/Http/Controllers/HomeController.php
+
+Then run:
+rm -rf storage/framework/views/*
+php artisan view:clear
+
+========================================
+NEED MORE HELP?
+========================================
+
+Share the output of:
+
+1. Laravel log (last 50 lines)
+2. ls -lh of faq.blade.php (to see file size)
+3. Error message when APP_DEBUG=true
+
+This will tell us exactly what's wrong!
+
+========================================

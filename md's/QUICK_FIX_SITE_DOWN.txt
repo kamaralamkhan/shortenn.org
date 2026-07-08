@@ -1,0 +1,163 @@
+========================================
+🚨 SITE DOWN - QUICK FIX
+========================================
+
+YOUR ENTIRE SITE IS SHOWING "PAGE NOT FOUND"
+
+REASON: .htaccess file is broken or missing!
+
+========================================
+⚡ FIX IN 2 MINUTES
+========================================
+
+STEP 1: Login to Hostinger File Manager
+→ Go to hPanel
+→ Click "File Manager"
+
+STEP 2: Go to public_html folder
+→ Click on "public_html"
+
+STEP 3: Enable "Show Hidden Files"
+→ Click Settings (gear icon) at top
+→ Enable "Show hidden files"
+→ Click Save
+
+STEP 4: Check if .htaccess exists
+→ Look for file named ".htaccess"
+→ If it exists but site doesn't work, DELETE it
+→ If it doesn't exist, continue...
+
+STEP 5: Create new .htaccess file
+→ Click "New File"
+→ Name: .htaccess
+→ Click "Create"
+
+STEP 6: Edit the file
+→ Right-click on .htaccess
+→ Click "Edit"
+→ DELETE everything inside
+→ Copy-paste this EXACT content:
+
+========================================
+COPY THIS (START FROM NEXT LINE):
+========================================
+
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    RewriteEngine On
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Send Requests To Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>
+
+========================================
+STOP COPYING HERE
+========================================
+
+STEP 7: Save the file
+→ Click "Save & Close"
+
+STEP 8: Check index.php exists
+→ Look for "index.php" in /public_html/
+→ Should be there (around 500 bytes)
+→ If missing, you need to upload it!
+
+STEP 9: Test your website
+→ Visit: https://shortenn.org
+→ Should work now!
+
+========================================
+IF STILL NOT WORKING
+========================================
+
+Check these files exist in /public_html/:
+
+MUST HAVE:
+✅ .htaccess (with the code above)
+✅ index.php
+✅ shortenn_laravel/ (folder)
+
+If index.php is missing:
+→ Upload from: D:\TOOLS\shortenn_laravel\index.php
+→ To: /public_html/index.php
+
+If shortenn_laravel folder is missing:
+→ You uploaded to wrong location!
+→ Upload entire shortenn_laravel folder
+→ Must be: /public_html/shortenn_laravel/
+
+========================================
+ALTERNATIVE: Upload Both Files
+========================================
+
+From your computer:
+D:\TOOLS\shortenn_laravel\.htaccess
+D:\TOOLS\shortenn_laravel\index.php
+
+Upload to Hostinger:
+/public_html/.htaccess
+/public_html/index.php
+
+Replace existing files if asked.
+
+========================================
+TEST AFTER FIX
+========================================
+
+1. https://shortenn.org → Homepage
+2. https://shortenn.org/about → About page
+3. https://shortenn.org/faq → FAQ page
+
+All should work!
+
+========================================
+WHAT HAPPENED?
+========================================
+
+Possible causes:
+- You accidentally deleted .htaccess
+- You uploaded files to wrong folder
+- File got corrupted during edit
+- FTP/upload issue
+
+The .htaccess file tells Apache how to route
+requests to Laravel. Without it = Page Not Found!
+
+========================================
+CONTACT SUPPORT (IF NOTHING WORKS)
+========================================
+
+Tell Hostinger:
+
+"My site shortenn.org shows Page Not Found.
+The .htaccess and index.php exist in /public_html/
+but site won't load. Can you check mod_rewrite
+is enabled and verify file permissions?"
+
+They can check server logs and fix server issues.
+
+========================================
+✅ MOST LIKELY FIX
+========================================
+
+Just recreate the .htaccess file with the code
+above and your site will be back online!
+
+90% of "Page Not Found" errors are due to
+missing or broken .htaccess file.
+
+========================================

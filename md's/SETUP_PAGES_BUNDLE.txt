@@ -1,0 +1,803 @@
+==============================================
+SHORTENN LARAVEL - PUBLIC PAGES TEMPLATES
+==============================================
+
+Create these files in: resources/views/pages/
+
+==============================================
+FILE: about.blade.php
+==============================================
+@extends('layouts.app')
+
+@section('title', 'About Us')
+
+@section('content')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <h1 class="display-4 fw-bold text-primary mb-4">About Shortenn</h1>
+            
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h3 class="text-primary mb-3">Our Mission</h3>
+                    <p class="lead">
+                        Shortenn is a free, fast, and reliable URL shortening service designed to make link sharing easier for everyone.
+                    </p>
+                    <p>
+                        Whether you're a marketer tracking campaigns, a content creator sharing resources, or simply someone who wants cleaner links, Shortenn provides the tools you need with no registration required.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h3 class="text-primary mb-3">Why Shortenn?</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-3">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            <strong>Free Forever:</strong> No hidden fees or premium plans
+                        </li>
+                        <li class="mb-3">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            <strong>No Registration Required:</strong> Start shortening URLs immediately
+                        </li>
+                        <li class="mb-3">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            <strong>Bulk Shortening:</strong> Process multiple URLs at once
+                        </li>
+                        <li class="mb-3">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            <strong>Custom Aliases:</strong> Create memorable short links
+                        </li>
+                        <li class="mb-3">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            <strong>Click Analytics:</strong> Track performance with detailed stats
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h3 class="text-primary mb-3">Our Technology</h3>
+                    <p>
+                        Built on Laravel 12 with modern web technologies, Shortenn offers lightning-fast redirects 
+                        and comprehensive analytics tracking including IP addresses, user agents, and referrer information.
+                    </p>
+                    <p class="mb-0">
+                        Our infrastructure is designed for reliability and speed, ensuring your short links work 
+                        flawlessly 24/7.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
+
+==============================================
+FILE: features.blade.php
+==============================================
+@extends('layouts.app')
+
+@section('title', 'Features')
+
+@section('content')
+<div class="container">
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold text-primary">Powerful Features</h1>
+        <p class="lead text-muted">Everything you need to manage and track your short URLs</p>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm border-primary border-2">
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="bi bi-lightning-fill text-primary display-5 me-3"></i>
+                        <h3 class="mb-0">Bulk URL Shortening</h3>
+                    </div>
+                    <p>Shorten multiple URLs at once with our powerful bulk processing feature. Simply paste your URLs line by line and get all your short links instantly.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm border-success border-2">
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="bi bi-pencil-square text-success display-5 me-3"></i>
+                        <h3 class="mb-0">Custom Aliases</h3>
+                    </div>
+                    <p>Create memorable branded short links with custom aliases. Choose your own short code (3-30 characters) to make your links easy to remember and share.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm border-info border-2">
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="bi bi-graph-up-arrow text-info display-5 me-3"></i>
+                        <h3 class="mb-0">Click Analytics</h3>
+                    </div>
+                    <p>Track every click with detailed analytics including IP addresses, user agents, referrers, and timestamps. Know exactly who's clicking your links and when.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm border-warning border-2">
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="bi bi-calendar-event text-warning display-5 me-3"></i>
+                        <h3 class="mb-0">Expiry Dates</h3>
+                    </div>
+                    <p>Set expiration dates for your short links. Perfect for time-sensitive campaigns, limited offers, or temporary promotions.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm border-danger border-2">
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="bi bi-speedometer2 text-danger display-5 me-3"></i>
+                        <h3 class="mb-0">Click Limits</h3>
+                    </div>
+                    <p>Control access with click limits. Automatically disable links after a certain number of clicks - great for exclusive content or limited capacity events.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm border-secondary border-2">
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="bi bi-qr-code text-secondary display-5 me-3"></i>
+                        <h3 class="mb-0">QR Code Generation</h3>
+                    </div>
+                    <p>Instantly generate QR codes for any short link. Perfect for print materials, posters, business cards, and offline marketing campaigns.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="bi bi-file-earmark-spreadsheet text-primary display-5 me-3"></i>
+                        <h3 class="mb-0">CSV Export</h3>
+                    </div>
+                    <p>Export all your links and analytics data to CSV format for further analysis in Excel, Google Sheets, or your favorite data tool.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="bi bi-shield-check text-success display-5 me-3"></i>
+                        <h3 class="mb-0">Link Management</h3>
+                    </div>
+                    <p>Full control over your links - enable/disable, delete, view detailed statistics, and manage everything from a single dashboard.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-5">
+        <a href="{{ route('home') }}" class="btn btn-primary btn-lg">
+            <i class="bi bi-arrow-right-circle me-2"></i>Start Shortening URLs
+        </a>
+    </div>
+</div>
+@endsection
+
+==============================================
+FILE: how-it-works.blade.php
+==============================================
+@extends('layouts.app')
+
+@section('title', 'How It Works')
+
+@section('content')
+<div class="container">
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold text-primary">How Shortenn Works</h1>
+        <p class="lead text-muted">Simple, fast, and efficient URL shortening in 3 easy steps</p>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <!-- Step 1 -->
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-2 text-center">
+                            <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                                <span class="display-4 fw-bold">1</span>
+                            </div>
+                        </div>
+                        <div class="col-md-10">
+                            <h3 class="text-primary mb-3">Paste Your URLs</h3>
+                            <p class="mb-3">Enter one or more URLs in the text box on the homepage. You can shorten multiple URLs at once by entering them on separate lines.</p>
+                            <div class="bg-light p-3 rounded font-monospace small">
+                                <strong>Format:</strong> URL | alias | expiry | max_clicks<br>
+                                <strong>Example:</strong> https://example.com | mylink | 2025-12-31 | 100
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-2 text-center">
+                            <div class="bg-success text-white rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                                <span class="display-4 fw-bold">2</span>
+                            </div>
+                        </div>
+                        <div class="col-md-10">
+                            <h3 class="text-success mb-3">Customize (Optional)</h3>
+                            <p class="mb-0">Add optional customizations to your links:</p>
+                            <ul class="mt-2">
+                                <li><strong>Custom Alias:</strong> Choose a memorable short code (3-30 chars)</li>
+                                <li><strong>Expiry Date:</strong> Set when the link should stop working (YYYY-MM-DD)</li>
+                                <li><strong>Click Limit:</strong> Maximum number of clicks allowed</li>
+                            </ul>
+                            <p class="text-muted small mb-0">Leave these blank to use auto-generated codes with no limits.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-2 text-center">
+                            <div class="bg-info text-white rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                                <span class="display-4 fw-bold">3</span>
+                            </div>
+                        </div>
+                        <div class="col-md-10">
+                            <h3 class="text-info mb-3">Get Your Short Links</h3>
+                            <p class="mb-0">Click "Shorten URLs" and instantly receive your short links. Each link comes with:</p>
+                            <ul class="mt-2">
+                                <li><strong>Short URL:</strong> Easy to share and remember</li>
+                                <li><strong>Copy Button:</strong> One-click copying to clipboard</li>
+                                <li><strong>QR Code:</strong> Instant QR code generation</li>
+                                <li><strong>Analytics:</strong> Track clicks and performance (login required)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Advanced Features -->
+    <div class="row justify-content-center mt-5">
+        <div class="col-lg-10">
+            <div class="card shadow-sm bg-light">
+                <div class="card-body">
+                    <h3 class="text-primary mb-3">
+                        <i class="bi bi-gear-fill me-2"></i>Advanced Features
+                    </h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5 class="text-success">For Guest Users:</h5>
+                            <ul>
+                                <li>Create unlimited short links</li>
+                                <li>No registration required</li>
+                                <li>Instant results</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="text-primary">For Registered Users:</h5>
+                            <ul>
+                                <li>Dashboard to manage all links</li>
+                                <li>Detailed click analytics</li>
+                                <li>Enable/disable links anytime</li>
+                                <li>Export data to CSV</li>
+                                <li>Delete unwanted links</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-5">
+        <a href="{{ route('home') }}" class="btn btn-primary btn-lg me-2">
+            <i class="bi bi-lightning-fill me-2"></i>Try It Now
+        </a>
+        <a href="{{ route('features') }}" class="btn btn-outline-primary btn-lg">
+            <i class="bi bi-list-stars me-2"></i>View All Features
+        </a>
+    </div>
+</div>
+@endsection
+
+==============================================
+FILE: use-cases.blade.php
+==============================================
+@extends('layouts.app')
+
+@section('title', 'Use Cases')
+
+@section('content')
+<div class="container">
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold text-primary">Use Cases</h1>
+        <p class="lead text-muted">Discover how Shortenn can help you in different scenarios</p>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <div class="text-center mb-3">
+                        <i class="bi bi-megaphone-fill text-primary" style="font-size: 3rem;"></i>
+                    </div>
+                    <h4 class="card-title text-center text-primary">Marketing Campaigns</h4>
+                    <p class="card-text">Track campaign performance with custom short links. Set expiry dates for time-sensitive offers and monitor click-through rates in real-time.</p>
+                    <ul class="small">
+                        <li>Custom branded links</li>
+                        <li>Click analytics</li>
+                        <li>Campaign expiry dates</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <div class="text-center mb-3">
+                        <i class="bi bi-share-fill text-success" style="font-size: 3rem;"></i>
+                    </div>
+                    <h4 class="card-title text-center text-success">Social Media</h4>
+                    <p class="card-text">Share clean, professional-looking links on Twitter, Facebook, Instagram, and LinkedIn. Track which platforms drive the most engagement.</p>
+                    <ul class="small">
+                        <li>Character-saving short URLs</li>
+                        <li>Referrer tracking</li>
+                        <li>Clean appearance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <div class="text-center mb-3">
+                        <i class="bi bi-envelope-fill text-info" style="font-size: 3rem;"></i>
+                    </div>
+                    <h4 class="card-title text-center text-info">Email Marketing</h4>
+                    <p class="card-text">Shorten long URLs in email campaigns while maintaining tracking capabilities. Measure email engagement and click rates effectively.</p>
+                    <ul class="small">
+                        <li>Professional appearance</li>
+                        <li>Click tracking</li>
+                        <li>Bulk URL processing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <div class="text-center mb-3">
+                        <i class="bi bi-qr-code-scan text-warning" style="font-size: 3rem;"></i>
+                    </div>
+                    <h4 class="card-title text-center text-warning">Print Materials</h4>
+                    <p class="card-text">Generate QR codes for posters, flyers, business cards, and packaging. Bridge offline and online marketing seamlessly.</p>
+                    <ul class="small">
+                        <li>QR code generation</li>
+                        <li>Short memorable codes</li>
+                        <li>Offline-to-online tracking</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <div class="text-center mb-3">
+                        <i class="bi bi-calendar-event-fill text-danger" style="font-size: 3rem;"></i>
+                    </div>
+                    <h4 class="card-title text-center text-danger">Event Management</h4>
+                    <p class="card-text">Create links for event registration, ticketing, or resources. Set expiry dates and click limits for capacity management.</p>
+                    <ul class="small">
+                        <li>Expiry dates for events</li>
+                        <li>Click limits for capacity</li>
+                        <li>Attendance tracking</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <div class="text-center mb-3">
+                        <i class="bi bi-file-earmark-text-fill text-secondary" style="font-size: 3rem;"></i>
+                    </div>
+                    <h4 class="card-title text-center text-secondary">Content Creators</h4>
+                    <p class="card-text">Share resources, affiliate links, and content easily. Track which links your audience engages with most.</p>
+                    <ul class="small">
+                        <li>Easy link management</li>
+                        <li>Engagement analytics</li>
+                        <li>Multiple link sharing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-5">
+        <div class="col-lg-8">
+            <div class="card shadow-sm bg-primary text-white">
+                <div class="card-body text-center p-4">
+                    <h3 class="mb-3">Ready to Start?</h3>
+                    <p class="mb-4">Join thousands of users who trust Shortenn for their URL shortening needs. No credit card required, no signup needed - just start shortening!</p>
+                    <a href="{{ route('home') }}" class="btn btn-light btn-lg">
+                        <i class="bi bi-arrow-right-circle me-2"></i>Create Your First Short Link
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
+
+==============================================
+FILE: faq.blade.php
+==============================================
+@extends('layouts.app')
+
+@section('title', 'FAQ')
+
+@section('content')
+<div class="container">
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold text-primary">Frequently Asked Questions</h1>
+        <p class="lead text-muted">Everything you need to know about Shortenn</p>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="accordion" id="faqAccordion">
+                <!-- Question 1 -->
+                <div class="accordion-item mb-3 shadow-sm">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            Is Shortenn really free?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes! Shortenn is completely free to use. You can create unlimited short URLs without any cost. We don't have premium plans or hidden fees.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="accordion-item mb-3 shadow-sm">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            Do I need to create an account?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            No! You can start shortening URLs immediately without any registration. However, creating a free account gives you access to a dashboard where you can manage all your links, view detailed analytics, and export data.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="accordion-item mb-3 shadow-sm">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                            How many URLs can I shorten at once?
+                        </button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            You can shorten as many URLs as you want in a single batch. Simply enter each URL on a new line in the text box. Our bulk processing feature handles multiple URLs efficiently.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="accordion-item mb-3 shadow-sm">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                            Can I customize my short links?
+                        </button>
+                    </h2>
+                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes! You can create custom aliases (3-30 characters) using letters, numbers, dashes, and underscores. For example: <code>shortenn.org/mylink</code>. If you don't specify an alias, we'll generate a random 6-character code for you.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="accordion-item mb-3 shadow-sm">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                            How long do short links last?
+                        </button>
+                    </h2>
+                    <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            By default, short links last forever. However, you can optionally set an expiry date when creating a link. After the expiry date, the link will no longer work.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="accordion-item mb-3 shadow-sm">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                            What are click limits?
+                        </button>
+                    </h2>
+                    <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Click limits allow you to automatically disable a link after it's been clicked a certain number of times. This is useful for limited offers, event capacity management, or exclusive content.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="accordion-item mb-3 shadow-sm">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7">
+                            What analytics do you provide?
+                        </button>
+                    </h2>
+                    <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Registered users get access to detailed analytics including:
+                            <ul class="mt-2">
+                                <li>Total click count</li>
+                                <li>IP addresses of visitors</li>
+                                <li>User agent information (browser/device)</li>
+                                <li>Referrer URLs (where clicks came from)</li>
+                                <li>Timestamps of each click</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 8 -->
+                <div class="accordion-item mb-3 shadow-sm">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8">
+                            Can I delete or disable my links?
+                        </button>
+                    </h2>
+                    <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes, if you're a registered user. From your dashboard, you can:
+                            <ul class="mt-2">
+                                <li>Toggle links on/off (temporarily disable without deleting)</li>
+                                <li>Permanently delete links</li>
+                                <li>View and manage all your links in one place</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 9 -->
+                <div class="accordion-item mb-3 shadow-sm">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq9">
+                            How do I generate QR codes?
+                        </button>
+                    </h2>
+                    <div id="faq9" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            After creating a short link, click the QR code icon next to it. A QR code will be instantly generated that you can download and use in print materials, presentations, or anywhere else.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 10 -->
+                <div class="accordion-item mb-3 shadow-sm">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq10">
+                            Is my data secure?
+                        </button>
+                    </h2>
+                    <div id="faq10" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes! We use industry-standard security practices including HTTPS encryption for all connections. We never share your data with third parties, and all passwords are securely hashed.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card shadow-sm bg-light mt-5">
+                <div class="card-body text-center">
+                    <h4 class="mb-3">Still have questions?</h4>
+                    <p class="text-muted mb-3">We're here to help! Feel free to reach out to us.</p>
+                    <a href="{{ route('contact') }}" class="btn btn-primary">
+                        <i class="bi bi-envelope me-2"></i>Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
+
+==============================================
+FILE: resources.blade.php
+==============================================
+@extends('layouts.app')
+
+@section('title', 'Resources')
+
+@section('content')
+<div class="container">
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold text-primary">Resources</h1>
+        <p class="lead text-muted">Helpful guides and tools to get the most out of Shortenn</p>
+    </div>
+
+    <div class="row g-4">
+        <!-- Documentation -->
+        <div class="col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <div class="text-center mb-3">
+                        <i class="bi bi-book-fill text-primary" style="font-size: 3rem;"></i>
+                    </div>
+                    <h4 class="card-title text-center">Documentation</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <a href="{{ route('how-it-works') }}" class="text-decoration-none">
+                                <i class="bi bi-arrow-right-circle me-2"></i>How It Works
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="{{ route('features') }}" class="text-decoration-none">
+                                <i class="bi bi-arrow-right-circle me-2"></i>Feature Overview
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="{{ route('use-cases') }}" class="text-decoration-none">
+                                <i class="bi bi-arrow-right-circle me-2"></i>Use Cases
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="{{ route('faq') }}" class="text-decoration-none">
+                                <i class="bi bi-arrow-right-circle me-2"></i>FAQ
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Guides -->
+        <div class="col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <div class="text-center mb-3">
+                        <i class="bi bi-lightbulb-fill text-warning" style="font-size: 3rem;"></i>
+                    </div>
+                    <h4 class="card-title text-center">Quick Guides</h4>
+                    <div class="list-group list-group-flush">
+                        <div class="list-group-item">
+                            <h6 class="mb-2">Creating Custom Aliases</h6>
+                            <p class="small text-muted mb-0">Use the format: <code>URL | alias</code></p>
+                        </div>
+                        <div class="list-group-item">
+                            <h6 class="mb-2">Setting Expiry Dates</h6>
+                            <p class="small text-muted mb-0">Format: <code>URL | | YYYY-MM-DD</code></p>
+                        </div>
+                        <div class="list-group-item">
+                            <h6 class="mb-2">Adding Click Limits</h6>
+                            <p class="small text-muted mb-0">Format: <code>URL | | | 100</code></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <div class="text-center mb-3">
+                        <i class="bi bi-tools text-success" style="font-size: 3rem;"></i>
+                    </div>
+                    <h4 class="card-title text-center">Useful Tools</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <i class="bi bi-qr-code me-2 text-primary"></i>
+                            QR Code Generator (built-in)
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-file-earmark-spreadsheet me-2 text-success"></i>
+                            CSV Export Tool
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-clipboard me-2 text-info"></i>
+                            One-Click Copy
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-graph-up me-2 text-warning"></i>
+                            Click Analytics Dashboard
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Best Practices -->
+    <div class="row justify-content-center mt-5">
+        <div class="col-lg-10">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h3 class="text-primary mb-4">
+                        <i class="bi bi-star-fill me-2"></i>Best Practices
+                    </h3>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <h5 class="text-success">Do's:</h5>
+                            <ul>
+                                <li>Use descriptive custom aliases for better recall</li>
+                                <li>Set expiry dates for time-sensitive content</li>
+                                <li>Monitor analytics to understand your audience</li>
+                                <li>Use QR codes for offline marketing</li>
+                                <li>Export data regularly for backup</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <h5 class="text-danger">Don'ts:</h5>
+                            <ul>
+                                <li>Don't use offensive or misleading aliases</li>
+                                <li>Don't share links that violate terms of service</li>
+                                <li>Don't create links for malicious content</li>
+                                <li>Don't use extremely long custom aliases</li>
+                                <li>Don't forget to test links before sharing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- API Documentation (Future) -->
+    <div class="row justify-content-center mt-4">
+        <div class="col-lg-10">
+            <div class="card shadow-sm bg-light">
+                <div class="card-body text-center">
+                    <i class="bi bi-code-slash text-muted" style="font-size: 3rem;"></i>
+                    <h4 class="mt-3 text-muted">API Documentation</h4>
+                    <p class="text-muted">Coming soon! Integrate Shortenn into your applications with our REST API.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
+
+==============================================
+END OF PUBLIC PAGES BUNDLE
+==============================================

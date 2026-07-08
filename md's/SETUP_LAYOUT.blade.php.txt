@@ -1,0 +1,122 @@
+<!-- SAVE THIS AS: resources/views/layouts/app.blade.php -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shortenn - Free URL Shortener with Analytics">
+    <title>{{ config('app.name') }} - @yield('title', 'URL Shortener')</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+    
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Custom CSS -->
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2154039585231057" crossorigin="anonymous"></script>
+    
+    @stack('styles')
+</head>
+<body>
+    <!-- AMP Auto Ads -->
+    <amp-auto-ads type="adsense" data-ad-client="ca-pub-2154039585231057"></amp-auto-ads>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="{{ route('home') }}">
+                <img src="{{ asset('logo.png') }}" alt="Shortenn" height="32" class="me-2">
+                <span class="fw-bold">Shortenn</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('home') }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('features') }}">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('how-it-works') }}">How It Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('faq') }}">FAQ</a>
+                    </li>
+                    @auth
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('dashboard') }}">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <form action="{{ route('logout') }}" method="POST" class="d-inline">
+                                @csrf
+                                <button type="submit" class="btn btn-link nav-link">Logout</button>
+                            </form>
+                        </li>
+                    @else
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('login') }}">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('register') }}">Register</a>
+                        </li>
+                    @endauth
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="py-4">
+        @yield('content')
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5>Shortenn</h5>
+                    <p class="small">Free, fast, and reliable URL shortening service with analytics.</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="{{ route('about') }}" class="text-white-50">About</a></li>
+                        <li><a href="{{ route('features') }}" class="text-white-50">Features</a></li>
+                        <li><a href="{{ route('use-cases') }}" class="text-white-50">Use Cases</a></li>
+                        <li><a href="{{ route('resources') }}" class="text-white-50">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Legal</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="{{ route('privacy') }}" class="text-white-50">Privacy Policy</a></li>
+                        <li><a href="{{ route('terms') }}" class="text-white-50">Terms of Service</a></li>
+                        <li><a href="{{ route('contact') }}" class="text-white-50">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="bg-white">
+            <div class="text-center small">
+                <p>&copy; {{ date('Y') }} Shortenn. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    @stack('scripts')
+</body>
+</html>

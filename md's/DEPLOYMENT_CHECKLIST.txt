@@ -1,0 +1,243 @@
+╔══════════════════════════════════════════════════════════════╗
+║                                                              ║
+║          SHORTENN.ORG - DEPLOYMENT CHECKLIST                ║
+║                                                              ║
+╚══════════════════════════════════════════════════════════════╝
+
+Print this and check off each step as you complete it!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📦 PRE-UPLOAD CHECKLIST
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+□ Read README_FIRST.txt
+□ Read QUICK_START.txt
+□ Hostinger account ready
+□ Domain (shortenn.org) pointing to Hostinger
+□ Have 10 minutes free time
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📤 UPLOAD & EXTRACT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+□ Logged into Hostinger hPanel
+□ Opened File Manager
+□ Navigated to /public_html/
+□ Uploaded shortenn_laravel.zip
+□ Right-clicked → Extract
+□ Verified extraction completed
+□ Folder exists: /public_html/shortenn_laravel/
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🗄️ DATABASE SETUP
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+□ Went to: Databases → MySQL Databases
+□ Created new database
+□ Noted credentials:
+
+   Database Name: _________________________________
+   Username:      _________________________________
+   Password:      _________________________________
+   Host:          localhost
+
+□ Opened phpMyAdmin
+□ Selected my database
+□ Clicked Import tab
+□ Selected database_export.sql
+□ Clicked Import button
+□ Import succeeded ✅
+□ Verified tables exist (users, links, click_logs, etc.)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚙️ .ENV CONFIGURATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+□ Navigated to /public_html/shortenn_laravel/
+□ Found .env file
+□ Right-clicked → Edit
+□ Updated DB_DATABASE with my database name
+□ Updated DB_USERNAME with my username
+□ Updated DB_PASSWORD with my password
+□ Verified no extra spaces before/after values
+□ Saved file
+□ Verified APP_ENV=production
+□ Verified APP_DEBUG=false
+□ Verified APP_URL=https://shortenn.org
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🌐 DOMAIN CONFIGURATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+□ Went to: Domains section
+□ Clicked on: shortenn.org
+□ Found "Document Root" setting
+□ Changed to: /public_html/shortenn_laravel/public
+□ Saved changes
+□ Domain points to correct folder ✅
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔒 FILE PERMISSIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+□ Navigated to: shortenn_laravel/storage/
+□ Right-clicked → Permissions
+□ Set to: 755
+□ Checked: Apply to subdirectories
+□ Clicked Change
+□ Success ✅
+
+□ Navigated to: shortenn_laravel/bootstrap/cache/
+□ Right-clicked → Permissions
+□ Set to: 755
+□ Clicked Change
+□ Success ✅
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ VERIFICATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+□ Visited: https://shortenn.org
+□ Homepage loaded successfully
+□ No errors displayed
+□ Clicked "Features" - works
+□ Clicked "FAQ" - works
+□ Clicked "Login" - works
+□ Tested URL shortening - works
+□ Mobile menu works (hamburger icon)
+
+□ Checked footer links:
+   □ About
+   □ Privacy
+   □ Terms
+   □ Contact
+
+□ Tested these URLs:
+   □ https://shortenn.org/ads.txt (accessible)
+   □ https://shortenn.org/sitemap.xml (accessible)
+   □ https://shortenn.org/robots.txt (accessible)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔐 SECURITY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+□ Logged in as admin:
+   Email: admin@shortenn.org
+   Password: admin123
+
+□ Changed admin password to strong password
+□ New password: _________________________________
+□ Logged out
+□ Logged back in with new password ✅
+
+□ Verified .env is NOT accessible:
+   https://shortenn.org/.env (should be 403/404)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🧪 FUNCTIONAL TESTING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+□ Tested URL shortening:
+   □ Entered a URL
+   □ Clicked "Shorten URLs"
+   □ Got shortened URL
+   □ Clicked short URL
+   □ Redirected correctly ✅
+
+□ Tested bulk shortening:
+   □ Entered multiple URLs (one per line)
+   □ All URLs shortened
+   □ Copy All URLs button works
+   □ Copy with Details works
+
+□ Tested dashboard:
+   □ Can see my links
+   □ Can toggle link on/off
+   □ Can delete link
+   □ Can export CSV
+
+□ Tested registration:
+   □ Can create new account
+   □ Can login with new account
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📱 MOBILE TESTING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+□ Opened on mobile/tablet
+□ Hamburger menu works
+□ Can shorten URLs
+□ Responsive design looks good
+□ All links work on mobile
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🌐 BROWSER TESTING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+□ Chrome - works
+□ Firefox - works
+□ Safari - works
+□ Edge - works
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📊 SEO SETUP
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+□ Submitted to Google Search Console
+□ Verified ownership
+□ Submitted sitemap: https://shortenn.org/sitemap.xml
+□ Submitted to Bing Webmaster Tools
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💰 ADSENSE SETUP
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+□ Logged into Google AdSense
+□ Added site: shortenn.org
+□ Verified ads.txt: https://shortenn.org/ads.txt
+□ Applied for approval
+□ Waiting for approval (1-2 weeks)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📈 POST-LAUNCH
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+□ Created social media accounts
+□ Shared on social media
+□ Bookmarked for personal use
+□ Told friends/colleagues
+□ Monitoring analytics
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎉 DEPLOYMENT COMPLETE!
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Congratulations! Your site is LIVE at https://shortenn.org
+
+Date Deployed: _____________________
+Time: _____________________________
+
+Notes:
+_____________________________________________________
+_____________________________________________________
+_____________________________________________________
+_____________________________________________________
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Keep this checklist for future reference!
