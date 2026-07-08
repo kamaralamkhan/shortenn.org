@@ -10,15 +10,27 @@ class FeedbackController extends Controller
     public function submit(Request $request)
     {
         $request->validate([
-            'message' => 'required|string|max:1000',
+            'message' => 'required|string|max:2000',
+            'name' => 'nullable|string|max:100',
+            'email' => 'nullable|email|max:150',
+            'subject' => 'nullable|string|max:150',
         ]);
 
         $messageContent = $request->input('message');
+        $name = $request->input('name', 'Anonymous User');
+        $email = $request->input('email', 'No Email Provided');
+        $subject = $request->input('subject', 'New Feedback from Shortenn User');
+        
+        $fullMessage = "Name: {$name}\nEmail: {$email}\nSubject: {$subject}\n\nMessage:\n{$messageContent}";
         
         try {
-            Mail::raw($messageContent, function ($message) {
+            Mail::raw($fullMessage, function ($message) use ($subject, $email) {
                 $message->to('support@shortenn.org')
-                        ->subject('New Feedback from Shortenn User');
+                        ->subject("Shortenn Contact: " . $subject);
+                
+                if ($email !== 'No Email Provided') {
+                    $message->replyTo($email);
+                }
             });
             
             return response()->json(['success' => true, 'message' => 'Thank you for your feedback!']);
