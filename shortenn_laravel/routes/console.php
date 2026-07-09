@@ -10,3 +10,6 @@ Artisan::command('inspire', function () {
 
 // Generate sitemap every 6 hours
 Schedule::command('sitemap:generate')->everySixHours();
+
+// Ping search engines daily
+Schedule::command('seo:ping')->dailyAt('02:00');
