@@ -90,4 +90,10 @@
         <changefreq>yearly</changefreq>
         <priority>0.8</priority>
     </url>
+    <url>
+        <loc>https://shortenn.org/blog/batch-url-shortener-excel</loc>
+        <lastmod>2026-07-09</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>

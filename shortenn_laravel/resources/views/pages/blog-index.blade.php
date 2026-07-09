@@ -79,22 +79,6 @@
     <div class="container">
         <div class="row g-4">
             
-            <!-- Article 1 -->
-            <div class="col-md-4">
-                <div class="blog-card">
-                    <div class="blog-card-body">
-                        <span class="blog-tag">Founder Story</span>
-                        <a href="{{ route('blog.best-alternative') }}" class="blog-title">Why I Got Tired of Expensive Link Shorteners (And Built a Free Alternative)</a>
-                        <p class="blog-excerpt">Tired of link limits and expensive plans? Discover why Shortenn.org is quickly becoming the go-to free Bitly alternative for marketers.</p>
-                        <div class="blog-meta">
-                            <span><i class="bi bi-calendar3"></i> Jul 8, 2026</span>
-                            <span>&bull; 4 min read</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Article 2 -->
             <div class="col-md-4">
                 <div class="blog-card">
                     <div class="blog-card-body">
@@ -119,6 +103,21 @@
                         <div class="blog-meta">
                             <span><i class="bi bi-calendar3"></i> Jul 9, 2026</span>
                             <span>&bull; 6 min read</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 4 -->
+            <div class="col-md-4">
+                <div class="blog-card">
+                    <div class="blog-card-body">
+                        <span class="blog-tag">Productivity</span>
+                        <a href="{{ route('blog.excel-batch') }}" class="blog-title">How to Shorten Multiple Links from Excel at Once</a>
+                        <p class="blog-excerpt">Stop wasting money on expensive Excel plugins. Discover the fastest way to use a batch link shortener to transform massive spreadsheets of URLs into clean short links.</p>
+                        <div class="blog-meta">
+                            <span><i class="bi bi-calendar3"></i> Jul 9, 2026</span>
+                            <span>&bull; 4 min read</span>
                         </div>
                     </div>
                 </div>
