@@ -357,6 +357,48 @@
     </div>
 </section>
 
+<!-- Latest Resources & Guides (SEO & AdSense Value Content) -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-6 fw-bold">Free URL Shortening Guides</h2>
+            <p class="lead text-muted">Learn how to maximize your marketing campaigns with our latest resources.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm" style="border-radius: var(--radius-md);">
+                    <div class="card-body p-4">
+                        <span class="badge bg-primary bg-opacity-10 text-primary mb-3">Productivity</span>
+                        <h3 class="h5 fw-bold mb-3"><a href="{{ route('blog.bulk-vs-single') }}" class="text-dark text-decoration-none">Mass URL Shortener Guide: Automate Your Workflow</a></h3>
+                        <p class="text-muted small mb-0">Discover why a bulk URL shortener is the ultimate time-saver for affiliates and marketers managing massive link sheets.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm" style="border-radius: var(--radius-md);">
+                    <div class="card-body p-4">
+                        <span class="badge bg-primary bg-opacity-10 text-primary mb-3">SEO & Branding</span>
+                        <h3 class="h5 fw-bold mb-3"><a href="{{ route('blog.alias-shortener') }}" class="text-dark text-decoration-none">Increase CTR by 34% with an Alias URL Shortener</a></h3>
+                        <p class="text-muted small mb-0">Learn how using custom aliases and branded links builds trust, avoids spam filters, and drastically improves engagement.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm" style="border-radius: var(--radius-md);">
+                    <div class="card-body p-4">
+                        <span class="badge bg-primary bg-opacity-10 text-primary mb-3">Founder Story</span>
+                        <h3 class="h5 fw-bold mb-3"><a href="{{ route('blog.best-alternative') }}" class="text-dark text-decoration-none">Why I Built a 100% Free Alternative to Expensive Link Shorteners</a></h3>
+                        <p class="text-muted small mb-0">Tired of hitting paywalls to shorten links? Read about our mission to provide the best free link shortening tools on the web.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <a href="{{ route('blog.index') }}" class="btn btn-link text-decoration-none fw-bold">View All Articles <i class="bi bi-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+
 @push('scripts')
 <script>
 function copyToClipboard(text) {
