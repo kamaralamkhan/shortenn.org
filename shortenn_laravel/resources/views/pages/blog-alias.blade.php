@@ -48,7 +48,7 @@
                     <span class="tag">#Branding</span>
                 </div>
                 <h1 class="display-5 fw-bold mb-3">How to Use an Alias URL Shortener to Increase CTR by 34%</h1>
-                <div class="small text-white-50">Published on {{ date('F j, Y') }} &bull; 6 min read</div>
+                <span class="text-white-50 small"><i class="bi bi-person-circle"></i> <a href="{{ route('author.kamar') }}" class="text-white text-decoration-none">Kamar Alam Khan</a> &nbsp;|&nbsp; <i class="bi bi-calendar3"></i> {{ date('F j, Y') }} &nbsp;|&nbsp; <i class="bi bi-clock"></i> 6 min read</span>
             </div>
         </div>
     </div>
@@ -110,7 +110,8 @@
   "headline": "How to Use an Alias URL Shortener to Increase CTR by 34%",
   "author": {
     "@@type": "Person",
-    "name": "Kamar Alam Khan"
+    "name": "Kamar Alam Khan",
+    "url": "https://shortenn.org/author/kamar"
   },
   "publisher": {
     "@@type": "Organization",

@@ -48,7 +48,7 @@
                     <span class="tag">#Marketing</span>
                 </div>
                 <h1 class="display-5 fw-bold mb-3">Mass URL Shortener Guide: Why Bulk Shortening Saves Hours of Work</h1>
-                <div class="small text-white-50">Published on {{ date('F j, Y') }} &bull; 5 min read</div>
+                <span class="text-white-50 small"><i class="bi bi-person-circle"></i> <a href="{{ route('author.kamar') }}" class="text-white text-decoration-none">Kamar Alam Khan</a> &nbsp;|&nbsp; <i class="bi bi-calendar3"></i> {{ date('F j, Y') }} &nbsp;|&nbsp; <i class="bi bi-clock"></i> 5 min read</span>
             </div>
         </div>
     </div>
@@ -113,7 +113,8 @@
   "headline": "Mass URL Shortener Guide: Why Bulk Shortening Saves Hours of Work",
   "author": {
     "@@type": "Person",
-    "name": "Kamar Alam Khan"
+    "name": "Kamar Alam Khan",
+    "url": "https://shortenn.org/author/kamar"
   },
   "publisher": {
     "@@type": "Organization",

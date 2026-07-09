@@ -42,6 +42,10 @@ Route::get('/blog/batch-url-shortener-excel', function () {
     return view('pages.blog-excel-batch');
 })->name('blog.excel-batch');
 
+Route::get('/author/kamar', function () {
+    return view('pages.author');
+})->name('author.kamar');
+
 Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);
 Route::get('/register', [AuthController::class, 'showRegister'])->name('register');

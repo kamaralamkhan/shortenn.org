@@ -14,7 +14,7 @@
             Stop wasting money on expensive Excel plugins. Discover the fastest way to use a batch link shortener to transform massive spreadsheets of long URLs into clean, trackable short links.
         </p>
         <div class="mt-4">
-            <span class="text-white-50 small"><i class="bi bi-person-circle"></i> Kamar Alam Khan &nbsp;|&nbsp; <i class="bi bi-calendar3"></i> Updated {{ date('F j, Y') }} &nbsp;|&nbsp; <i class="bi bi-clock"></i> 4 min read</span>
+            <span class="text-white-50 small"><i class="bi bi-person-circle"></i> <a href="{{ route('author.kamar') }}" class="text-white text-decoration-none">Kamar Alam Khan</a> &nbsp;|&nbsp; <i class="bi bi-calendar3"></i> Updated {{ date('F j, Y') }} &nbsp;|&nbsp; <i class="bi bi-clock"></i> 4 min read</span>
         </div>
     </div>
 </section>
@@ -147,7 +147,7 @@
   "author": {
     "@@type": "Person",
     "name": "Kamar Alam Khan",
-    "url": "https://shortenn.org/about"
+    "url": "https://shortenn.org/author/kamar"
   },
   "publisher": {
     "@@type": "Organization",

@@ -71,7 +71,7 @@
                 <h1 class="display-5 fw-bold mb-3">Why I Got Tired of Expensive Link Shorteners (And Built a Free Alternative)</h1>
                 <div class="blog-author justify-content-center">
                     <div>
-                        <div class="fw-semibold">By Kamar Alam Khan</div>
+                        <div class="fw-semibold">By <a href="{{ route('author.kamar') }}" class="text-dark">Kamar Alam Khan</a></div>
                         <div class="small text-white-50">Published on {{ date('F j, Y') }} &bull; 4 min read</div>
                     </div>
                 </div>
@@ -137,19 +137,19 @@
 @push('scripts')
 <script type="application/ld+json">
 {
-  "@@context": "https://schema.org",
-  "@@type": "Article",
+  "@context": "https://schema.org",
+  "@type": "Article",
   "headline": "Why I Got Tired of Expensive Link Shorteners (And Built a Free Alternative)",
   "author": {
-    "@@type": "Person",
+    "@type": "Person",
     "name": "Kamar Alam Khan",
-    "url": "https://x.com/Kamaralamkhan_"
+    "url": "https://shortenn.org/author/kamar"
   },
   "publisher": {
-    "@@type": "Organization",
+    "@type": "Organization",
     "name": "Shortenn",
     "logo": {
-      "@@type": "ImageObject",
+      "@type": "ImageObject",
       "url": "https://shortenn.org/logo.png"
     }
   },
