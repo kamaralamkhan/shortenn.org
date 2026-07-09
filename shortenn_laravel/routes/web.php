@@ -22,9 +22,21 @@ Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/privacy', [HomeController::class, 'privacy'])->name('privacy');
 Route::get('/terms', [HomeController::class, 'terms'])->name('terms');
 Route::get('/guide-shortlink-safety', [HomeController::class, 'guideShortlinkSafety'])->name('guide-shortlink-safety');
+Route::get('/blog', function () {
+    return view('pages.blog-index');
+})->name('blog.index');
+
 Route::get('/blog/best-free-bitly-alternative-bulk-url-shortener', function () {
     return view('pages.blog-best-alternative');
 })->name('blog.best-alternative');
+
+Route::get('/blog/mass-multi-bulk-url-shortener-guide', function () {
+    return view('pages.blog-bulk');
+})->name('blog.bulk-vs-single');
+
+Route::get('/blog/how-to-use-alias-url-shortener', function () {
+    return view('pages.blog-alias');
+})->name('blog.alias-shortener');
 
 Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);

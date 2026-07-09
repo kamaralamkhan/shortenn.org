@@ -151,7 +151,7 @@
                 <h5>Resources</h5>
                 <ul class="list-unstyled">
                     <li class="mb-2"><a href="{{ route("faq") }}">FAQ</a></li>
-                    <li class="mb-2"><a href="{{ route("blog.best-alternative") }}">Blog</a></li>
+                    <li class="mb-2"><a href="{{ route("blog.index") }}">Blog</a></li>
                     <li class="mb-2"><a href="{{ route("guide-shortlink-safety") }}">Safety Guide</a></li>
                     <li class="mb-2"><a href="{{ route("about") }}">About Us</a></li>
                 </ul>
