@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('meta_title', 'Shortenn.org — #1 Free Bulk URL Shortener | Shorten Multiple Links Instantly')
+@section('meta_title', 'Free Bulk URL Shortener | Shortenn.org')
 @section('meta_description', 'Shortenn.org is the fastest free bulk URL shortener. Shorten multiple links at once with custom aliases, expiry dates, click limits, and real-time analytics. No registration required.')
 @section('canonical_url', 'https://shortenn.org/')
 @section('meta_keywords', 'bulk URL shortener, free link shortener, shorten multiple URLs, custom short links, URL analytics, link tracker, best URL shortener USA')

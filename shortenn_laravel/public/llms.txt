@@ -1,0 +1,23 @@
+# Shortenn.org
+
+> Free bulk URL shortener that lets you shorten multiple links at once with custom aliases, real-time analytics, and click tracking.
+
+## Overview
+Shortenn.org is a utility application designed for marketers, developers, and everyday users who need to efficiently manage their links. Unlike most competitors, Shortenn allows users to process hundreds of URLs simultaneously and create custom branded aliases (e.g., shortenn.org/MyCampaign) entirely for free, without a mandatory registration.
+
+## Core Features
+*   **Bulk Shortening:** Paste an entire list of URLs to shorten them all at once.
+*   **Custom Aliases:** Create branded links to increase click-through rates.
+*   **Advanced Controls:** Set click limits or expiration dates on your links.
+*   **Real-time Analytics:** Track the performance of your shortened URLs.
+
+## Key Pages
+*   **Home/App:** [https://shortenn.org/](https://shortenn.org/)
+*   **Features:** [https://shortenn.org/features](https://shortenn.org/features)
+*   **Blog/Guides:** [https://shortenn.org/blog](https://shortenn.org/blog)
+*   **Contact:** [https://shortenn.org/contact](https://shortenn.org/contact)
+
+## Technical Information
+*   All links are secure and redirect via HTTPS 301.
+*   No strict rate limits for human users, but abusive bots will be blocked.
+*   To report a malicious link or abuse, contact support@shortenn.org.

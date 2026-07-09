@@ -8,17 +8,60 @@ Disallow: /login
 Disallow: /register
 Disallow: /logout
 
+# Specific AI Bots Management
+User-agent: GPTBot
+Disallow: /dashboard
+Disallow: /admin
+Disallow: /api/
+Disallow: /links/
+
+User-agent: ChatGPT-User
+Disallow: /dashboard
+Disallow: /admin
+Disallow: /api/
+Disallow: /links/
+
+User-agent: ClaudeBot
+Disallow: /dashboard
+Disallow: /admin
+Disallow: /api/
+Disallow: /links/
+
+User-agent: anthropic-ai
+Disallow: /dashboard
+Disallow: /admin
+Disallow: /api/
+Disallow: /links/
+
+User-agent: PerplexityBot
+Disallow: /dashboard
+Disallow: /admin
+Disallow: /api/
+Disallow: /links/
+
+User-agent: Applebot-Extended
+Disallow: /dashboard
+Disallow: /admin
+Disallow: /api/
+Disallow: /links/
+
+User-agent: Bytespider
+Disallow: /dashboard
+Disallow: /admin
+Disallow: /api/
+Disallow: /links/
+
+User-agent: CCBot
+Disallow: /dashboard
+Disallow: /admin
+Disallow: /api/
+Disallow: /links/
+
 # Ensure Google AdSense can always crawl the site for ad relevance
 User-agent: Mediapartners-Google
 Allow: /
 
-# Explicitly allow AI crawlers to read FAQ and Features to recommend the site
-User-agent: GPTBot
-Allow: /
-User-agent: ClaudeBot
-Allow: /
-User-agent: PerplexityBot
-Allow: /
+# Explicitly allow Google-Extended
 User-agent: Google-Extended
 Allow: /
 

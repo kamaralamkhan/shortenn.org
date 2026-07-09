@@ -43,21 +43,11 @@
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
-    {
-        "@@context": "https://schema.org",
-        "@@type": "WebApplication",
-        "name": "Shortenn",
-        "url": "https://shortenn.org",
-        "description": "Free bulk URL shortener tool that lets you shorten multiple links at once with custom aliases, analytics, and click tracking.",
-        "applicationCategory": "UtilityApplication",
-        "operatingSystem": "Web",
-        "offers": {
-            "@@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-        },
-        "creator": {
+    [
+        {
+            "@@context": "https://schema.org",
             "@@type": "Organization",
+            "@@id": "https://shortenn.org/#organization",
             "name": "Shortenn",
             "url": "https://shortenn.org",
             "logo": "https://shortenn.org/logo.png",
@@ -71,8 +61,25 @@
                 "https://github.com/kamaralamkhan",
                 "https://in.linkedin.com/in/kamaralamkhan"
             ]
+        },
+        {
+            "@@context": "https://schema.org",
+            "@@type": "WebApplication",
+            "name": "Shortenn",
+            "url": "https://shortenn.org",
+            "description": "Free bulk URL shortener tool that lets you shorten multiple links at once with custom aliases, analytics, and click tracking.",
+            "applicationCategory": "UtilityApplication",
+            "operatingSystem": "Web",
+            "offers": {
+                "@@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+            },
+            "creator": {
+                "@@id": "https://shortenn.org/#organization"
+            }
         }
-    }
+    ]
     </script>
 
     @stack("styles")
